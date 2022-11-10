@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_minhas_reservas"
+        android:title="Minhas Reservas"/>
+
+    <item android:id="@+id/menu_meus_pets"
+        android:title="Meus Pets"/>
+
+
+    <item android:id="@+id/menu_minha_conta"
+        android:title="Minha conta"/>
+
+    <item android:id="@+id/menu_sair"
+        android:title="Sair"/>
+</menu>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.administrador.EditarStatusReservaActivity">
+
+    <include
+        android:id="@+id/include12"
+        layout="@layout/toolbar_voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include12"
+        app:layout_constraintVertical_bias="0.18"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Consulta Geral"
+                android:textColor="#0E2041"
+                android:textSize="34dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include12" />
+
+            <TextView
+                android:id="@+id/text_servico_descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Serviço"
+                android:textColor="#0E2041"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+            <TextView
+                android:id="@+id/text_servico"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:onClick="detalhesServico"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/menu_cliente_home_servicos_shape"
+                android:drawableStart="@drawable/ic_baseline_cleaning_services_15"
+                android:drawablePadding="5dp"
+                android:text="Tosa"
+                android:textColor="#497BD7"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/text_servico_descricao"
+                app:layout_constraintTop_toBottomOf="@+id/text_servico_descricao" />
+
+
+            <TextView
+                android:id="@+id/text_dia_horario_descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Dia e Horário"
+                android:textColor="#0E2041"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/text_servico_descricao"
+                app:layout_constraintTop_toBottomOf="@+id/text_servico" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/text_dia_horario_descricao"
+                app:layout_constraintTop_toBottomOf="@+id/text_dia_horario_descricao">
+
+                <TextView
+                    android:id="@+id/text_dia"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/menu_cliente_home_servicos_shape"
+                    android:drawableStart="@drawable/ic_baseline_calendar_month_15"
+                    android:drawablePadding="5dp"
+                    android:text="06 Nov 2022"
+                    android:textColor="#497BD7"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/text_dia_horario_descricao"
+                    app:layout_constraintTop_toBottomOf="@+id/text_dia_horario_descricao" />
+
+                <TextView
+                    android:id="@+id/text_horario"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_cliente_home_servicos_shape"
+                    android:drawableStart="@drawable/ic_baseline_access_time_filled_15"
+                    android:drawablePadding="5dp"
+                    android:text="13:00"
+                    android:textColor="#497BD7"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/text_dia_horario_descricao"
+                    app:layout_constraintTop_toBottomOf="@+id/text_dia_horario_descricao" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/text_pet_descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Pet"
+                android:textColor="#0E2041"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/text_dia_horario_descricao"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+            <TextView
+                android:id="@+id/text_pet"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:onClick="detalhesPet"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/menu_cliente_home_servicos_shape"
+                android:drawableStart="@drawable/ic_baseline_pets_15"
+                android:drawablePadding="5dp"
+                android:text="Pet"
+                android:textColor="#497BD7"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/text_pet_descricao"
+                app:layout_constraintTop_toBottomOf="@+id/text_pet_descricao" />
+
+
+            <TextView
+                android:id="@+id/text_dono_descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Dono(a)"
+                android:textColor="#0E2041"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/text_pet"
+                app:layout_constraintTop_toBottomOf="@+id/text_pet" />
+
+            <TextView
+                android:id="@+id/text_dono"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/menu_cliente_home_servicos_shape"
+                android:drawableStart="@drawable/ic_baseline_person_15"
+                android:drawablePadding="5dp"
+                android:text="Dono"
+                android:textColor="#497BD7"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/text_dono_descricao"
+                app:layout_constraintTop_toBottomOf="@+id/text_dono_descricao" />
+
+            <TextView
+                android:id="@+id/text_telefone_descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Telefone"
+                android:textColor="#0E2041"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/text_dono"
+                app:layout_constraintTop_toBottomOf="@+id/text_dono" />
+
+            <TextView
+                android:id="@+id/text_telefone"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/menu_cliente_home_servicos_shape"
+                android:drawableStart="@drawable/ic_baseline_local_phone_15"
+                android:drawablePadding="5dp"
+                android:text="Telefone"
+                android:textColor="#497BD7"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/text_telefone_descricao"
+                app:layout_constraintTop_toBottomOf="@+id/text_telefone_descricao" />
+
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Status da reserva"
+                android:textColor="#0E2041"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/text_telefone"
+                app:layout_constraintTop_toBottomOf="@+id/text_telefone" />
+
+            <Spinner
+                android:id="@+id/reserva_spinner"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="80dp"
+                app:layout_constraintStart_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
