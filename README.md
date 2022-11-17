@@ -2,7 +2,7 @@
 
 <h3>Descrição do Projeto</h3>
 
-<p>Se trata de uma aplicação mobile de gerenciamento de reservas de um petShop.</p>
+<p>Se trata de uma aplicação mobile de gerenciamento de reservas de um clinica veterinária.</p>
 
 <h3>Funcionalidade desenvolvidas</h3>
 <ul>
